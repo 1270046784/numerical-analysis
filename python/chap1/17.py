@@ -18,9 +18,14 @@ def calc(n):
             res += 1 / (i * i - 1)
         return res
 
+    def _true_value():
+        """真值计算"""
+        return 0.5 * (1.5 - 1 / n - 1 / (n + 1))
+
     print(f'计算S_{n}:')
     print(f'正序计算结果:{_calc()}')
-    print(f'倒序计算结果:{_calc_reverse()}\n')
+    print(f'倒序计算结果:{_calc_reverse()}')
+    print(f'真值计算结果:{_true_value()}\n')
 
 
 if __name__ == '__main__':
